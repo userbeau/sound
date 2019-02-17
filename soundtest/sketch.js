@@ -136,7 +136,6 @@ function setupButtons() {
   buttonPredict = select('#buttonPredict');
   buttonPredict.mousePressed(classify);
 }
-
 // Show the results
 function gotResults(err, result) {
   // Display any error
