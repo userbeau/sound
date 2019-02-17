@@ -65,15 +65,15 @@ function draw() {
   if (classificationResult == 'A' && lastClass !== 'A') {
       osc2.amp(0, 0.5);
       osc3.amp(0, 0.5);
-      osc1.amp(0.5, 0.05);
+      osc1.amp(1, 0.05);
   } else if (classificationResult == 'B' && lastClass !== 'B') {
     osc1.amp(0, 0.5);
     osc3.amp(0, 0.5);
-    osc2.amp(0.5, 0.05);
+    osc2.amp(1, 0.05);
   } else if (classificationResult == 'C' && lastClass !== 'C') {
     osc1.amp(0, 0.5);
     osc2.amp(0, 0.5);
-    osc3.amp(0.5, 0.05);
+    osc3.amp(1, 0.05);
   }
   lastClass = classificationResult;
 }
