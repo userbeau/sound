@@ -43,19 +43,18 @@ function setup() {
   osc1.setType('sine');
   osc1.freq(75);
   osc1.amp(0);
-  osc1.start();
+
 
   osc2 = new p5.Oscillator();
   osc2.setType('sine');
   osc2.freq(180);
   osc2.amp(0);
-  osc2.start();
+
 
   osc3 = new p5.Oscillator();
   osc3.setType('sine');
   osc3.freq(120);
   osc3.amp(0);
-  osc3.start();
 
 }
 
@@ -101,6 +100,7 @@ function setupButtons() {
   // from the video with a label of "A" to the classifier
   buttonA = select('#ButtonA');
   buttonA.mousePressed(function() {
+    osc1.start();
     classifier.addImage('A');
     select('#amountOfAImages').html(imagesOfA++);
   });
@@ -109,12 +109,14 @@ function setupButtons() {
   // from the video with a label of "B" to the classifier
   buttonB = select('#ButtonB');
   buttonB.mousePressed(function() {
+    osc2.start();
     classifier.addImage('B');
     select('#amountOfBImages').html(imagesOfB++);
   });
 
   buttonC = select('#ButtonC');
   buttonC.mousePressed(function() {
+    osc3.start();
     classifier.addImage('C');
     select('#amountOfCImages').html(imagesOfC++);
   });
