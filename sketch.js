@@ -40,20 +40,20 @@ function setup() {
   setupButtons();
 
   osc1 = new p5.Oscillator();
-  osc1.setType('sine');
-  osc1.freq(75);
+  osc1.setType('square');
+  osc1.freq(50);
   osc1.amp(0);
 
 
   osc2 = new p5.Oscillator();
-  osc2.setType('sine');
-  osc2.freq(180);
+  osc2.setType('square');
+  osc2.freq(60);
   osc2.amp(0);
 
 
   osc3 = new p5.Oscillator();
-  osc3.setType('sine');
-  osc3.freq(120);
+  osc3.setType('square');
+  osc3.freq(40);
   osc3.amp(0);
 
 }
